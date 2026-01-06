@@ -1,0 +1,18 @@
+---
+glob: "**/*.{html,text,js}{+*,}.erb"
+exclude:
+  - '**/vendor/**/*'
+  - '**/node_modules/**/*'
+  - '**/views/application/icons/**/*'
+linters:
+  Rubocop:
+    enabled: true
+    rubocop_config:
+      inherit_from:
+        - rubocop.yml
+      Layout/TrailingEmptyLines:
+        Enabled: false
+      Layout/InitialIndentation:
+        Enabled: false
+      Lint/UselessAssignment:
+        Enabled: false
