@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rubocop-thread_safety"
   s.add_dependency "erb_lint"
 
-  s.files = %w[ rubocop.yml, .erb-lint.yml ]
+  s.files = %w[ rubocop.yml, .erb_lint.yml ]
 end
