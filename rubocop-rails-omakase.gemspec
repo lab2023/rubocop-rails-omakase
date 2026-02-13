@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
 
   s.license = "MIT"
 
-  s.version = "1.1.0"
+  s.version = "1.1.1"
   s.platform = Gem::Platform::RUBY
 
   s.add_dependency "rubocop"
@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rubocop-thread_safety"
   s.add_dependency "erb_lint"
 
-  s.files = %w[ rubocop.yml, .erb_lint.yml ]
+  s.files = %w[ rubocop.yml ]
 end

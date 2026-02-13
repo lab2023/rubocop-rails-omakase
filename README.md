@@ -32,6 +32,35 @@ inherit_gem:
 
 Now you can run `./bin/rubocop` to check for compliance and `./bin/rubocop -a` to automatically fix violations.
 
+## ERB Lint
+
+This gem includes a reference template for ERB linting. Copy `.erb_lint.yml.template` to your project root as `.erb_lint.yml`:
+
+```bash
+cp $(bundle show rubocop-rails-omakase)/.erb_lint.yml.template .erb_lint.yml
+```
+
+Or manually create `.erb_lint.yml` in your project root with:
+
+```yml
+glob: "**/*.{html,text,js}{+*,}.erb"
+exclude:
+  - '**/vendor/**/*'
+  - '**/node_modules/**/*'
+  - '**/views/application/icons/**/*'
+linters:
+  Rubocop:
+    enabled: true
+    rubocop_config:
+      inherit_from:
+        - .rubocop.yml
+      Layout/TrailingEmptyLines:
+        Enabled: false
+      Layout/InitialIndentation:
+        Enabled: false
+      Lint/UselessAssignment:
+        Enabled: false
+```
 
 ## Contributing
 
